@@ -1,0 +1,35 @@
+[user]
+	name = David Torrell
+	email = david@ciber.cat
+[color]
+	ui = auto
+[github]
+	user = davidtorrell
+[core]
+	editor = vim
+	excludesfile = /home/david/.gitignore
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	st = status -sb
+        last = rev-parse --short HEAD
+        distclean = clean -d -f -x
+        c = commit
+        ca = commit --amend --no-edit
+[branch]
+	autosetuprebase = always
+[push]
+	default = current
+[help]
+	autocorrect = 1
+[pager]
+        log = diff-highlight | less -R
+        show = diff-highlight | less -R
+        diff = diff-highlight | less -R
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[merge]
+	renameLimit = 9999
+[diff]
+	renameLimit = 9999
