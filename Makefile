@@ -27,9 +27,10 @@ install-misc:
 	cp -f `pwd`/misc/vimrc ~/.vimrc
 	rm -f ~/.tmux.conf
 ifeq ($(shell uname), Darwin)
-	cp -f `pwd`/misc/tmux.conf.osx ~/.tmux.conf
+	cp -f `pwd`/misc/tmux.conf ~/.tmux.conf
+	cp -f `pwd`/misc/tmux.conf.local ~/.tmux.conf.local
 	touch ~/.hushlogin
 else
-	ln -s `pwd`/misc/tmux.conf.linux ~/.tmux.conf
+	ln -s `pwd`/misc/tmux.conf ~/.tmux.conf
 endif
 
