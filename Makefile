@@ -2,7 +2,7 @@
 install: install-shell install-powerline install-bin install-git install-misc
 
 install-powerline:
-	go get -u github.com/justjanne/powerline-go
+	go get -u github.com/davidtorrell/powerline-go
 
 install-shell: install-powerline
 	rm -f ~/.profile
