@@ -34,6 +34,6 @@ ifeq ($(shell uname), Darwin)
 	cp -f `pwd`/misc/.tmux/.tmux.conf.local ~/.tmux.conf.local
 	touch ~/.hushlogin
 else
-	ln -s `pwd`/misc/.tmux/tmux.conf ~/.tmux.conf
+	cp -f `pwd`/misc/.tmux/tmux.conf ~/.tmux.conf
 endif
 
