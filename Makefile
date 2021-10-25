@@ -25,7 +25,7 @@ install-git:
 install-misc:
 	rm -f ~/.vimrc
 	rm -f ~/.tmux.conf
-	rm -f ~/.tmux
+	rm -rf ~/.tmux
 	cp -f `pwd`/misc/vimrc ~/.vimrc
 	mkdir -p ~/.tmux/tmux-powerline
 	cp -rf `pwd`/misc/.tmux/tmux-powerline/* ~/.tmux/tmux-powerline/
