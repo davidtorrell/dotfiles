@@ -11,3 +11,8 @@ In your home directory:
     git clone https://github.com/davidtorrell/dotfiles.git
     cd dotfiles && make install
 ```
+
+*Debian errors
+```shell
+apt install ca-certificates libgnutls30 -y
+```
