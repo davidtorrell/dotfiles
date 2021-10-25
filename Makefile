@@ -26,6 +26,8 @@ install-misc:
 	rm -f ~/.vimrc
 	cp -f `pwd`/misc/vimrc ~/.vimrc
 	rm -f ~/.tmux.conf
+	mkdir ~/.tmux
+	cp -f `pwd`/misc/.tmux/tmux-powerline ~/.tmux/
 ifeq ($(shell uname), Darwin)
 	cp -f `pwd`/misc/.tmux/.tmux.conf ~/.tmux.conf
 	cp -f `pwd`/misc/.tmux/.tmux.conf.local ~/.tmux.conf.local
