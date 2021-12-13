@@ -3,8 +3,9 @@ install: install-shell install-powerline install-bin install-git install-misc
 
 install-powerline:
 	go get -u github.com/davidtorrell/powerline-go
+	cp -rf `pwd`/misc/.tmux/tmux-powerline/* ~/.tmux/tmux-powerline/
 
-install-shell: install-powerline
+install-shell:
 	rm -f ~/.profile
 	rm -f ~/.bashrc
 	cp -f `pwd`/shell/profile ~/.profile
@@ -23,17 +24,21 @@ install-git:
 	cp -f `pwd`/git/git-completion.bash ~/.git-completion.bash
 
 install-misc:
-	rm -f ~/.vimrc
-	rm -f ~/.tmux.conf
-	rm -rf ~/.tmux
+	cp -f ~/.vimrc ~/.vimrc_bak
+	cp -f ~/.tmux.conf ~/.tmux.conf_bak
+
+	rm -rf ~/.tmux*
+	rm -rf ~/.tmux*
+
 	cp -f `pwd`/misc/vimrc ~/.vimrc
-	mkdir -p ~/.tmux/tmux-powerline
-	cp -rf `pwd`/misc/.tmux/tmux-powerline/* ~/.tmux/tmux-powerline/
+	cp -f `pwd`/misc/tmux.conf ~/.tmux.conf
+
 ifeq ($(shell uname), Darwin)
-	cp -f `pwd`/misc/.tmux/.tmux.conf ~/.tmux.conf
-	cp -f `pwd`/misc/.tmux/.tmux.conf.local ~/.tmux.conf.local
+	mkdir -p ~/.tmux
+	cp -f `pwd`/misc/tmux-mac.conf ~/.tmux.conf
+	cp -f `pwd`/misc/tmux/ip_address.sh ~/.tmux/ip_address.sh
 	touch ~/.hushlogin
 else
-	cp -f `pwd`/misc/.tmux/tmux.conf ~/.tmux.conf
+	cp -f `pwd`/misc/tmux-linux.conf ~/.tmux.conf
 endif
 
