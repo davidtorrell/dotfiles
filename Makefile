@@ -28,7 +28,6 @@ install-misc:
 	rm -rf ~/.tmux*
 
 	cp -f `pwd`/misc/vimrc ~/.vimrc
-	cp -f `pwd`/misc/tmux.conf ~/.tmux.conf
 
 ifeq ($(shell uname), Darwin)
 	mkdir -p ~/.tmux
