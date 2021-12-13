@@ -24,9 +24,6 @@ install-git:
 	cp -f `pwd`/git/git-completion.bash ~/.git-completion.bash
 
 install-misc:
-	cp -f ~/.vimrc ~/.vimrc_bak
-	cp -f ~/.tmux.conf ~/.tmux.conf_bak
-
 	rm -rf ~/.tmux*
 	rm -rf ~/.tmux*
 
