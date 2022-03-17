@@ -1,5 +1,8 @@
 
-install: install-shell install-powerline install-bin install-git install-misc
+install: install-go install-shell install-powerline install-bin install-git install-misc
+
+install-go:
+	apt install golang -y
 
 install-powerline:
 	go get -u github.com/davidtorrell/powerline-go
