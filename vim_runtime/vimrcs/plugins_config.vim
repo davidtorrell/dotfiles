@@ -76,7 +76,7 @@ set grepprg=/bin/grep\ -nH
 let g:NERDTreeWinPos = "right"
 let NERDTreeMapOpenInTab='<TAB>'
 let NERDTreeMapOpenInTabSilent='<ENTER>'
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
