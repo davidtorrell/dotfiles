@@ -24,7 +24,6 @@ bufexplorer https://github.com/jlanzarotta/bufexplorer
 ctrlp.vim https://github.com/ctrlpvim/ctrlp.vim
 mayansmoke https://github.com/vim-scripts/mayansmoke
 nerdtree https://github.com/preservim/nerdtree
-nginx.vim https://github.com/chr4/nginx.vim
 open_file_under_cursor.vim https://github.com/amix/open_file_under_cursor.vim
 tlib https://github.com/tomtom/tlib_vim
 vim-addon-mw-utils https://github.com/MarcWeber/vim-addon-mw-utils
@@ -34,17 +33,12 @@ vim-colors-solarized https://github.com/altercation/vim-colors-solarized
 vim-indent-object https://github.com/michaeljsmith/vim-indent-object
 vim-less https://github.com/groenewege/vim-less
 vim-pyte https://github.com/therubymug/vim-pyte
-vim-snipmate https://github.com/garbas/vim-snipmate
 vim-snippets https://github.com/honza/vim-snippets
 vim-surround https://github.com/tpope/vim-surround
-vim-expand-region https://github.com/terryma/vim-expand-region
 vim-multiple-cursors https://github.com/terryma/vim-multiple-cursors
 vim-fugitive https://github.com/tpope/vim-fugitive
 vim-rhubarb https://github.com/tpope/vim-rhubarb
-goyo.vim https://github.com/junegunn/goyo.vim
-vim-zenroom2 https://github.com/amix/vim-zenroom2
 vim-repeat https://github.com/tpope/vim-repeat
-vim-commentary https://github.com/tpope/vim-commentary
 vim-gitgutter https://github.com/airblade/vim-gitgutter
 gruvbox https://github.com/morhetz/gruvbox
 vim-flake8 https://github.com/nvie/vim-flake8
@@ -54,8 +48,6 @@ lightline-ale https://github.com/maximbaz/lightline-ale
 vim-abolish https://github.com/tpope/vim-abolish
 rust.vim https://github.com/rust-lang/rust.vim
 vim-markdown https://github.com/plasticboy/vim-markdown
-vim-gist https://github.com/mattn/vim-gist
-vim-ruby https://github.com/vim-ruby/vim-ruby
 typescript-vim https://github.com/leafgarland/typescript-vim
 vim-javascript https://github.com/pangloss/vim-javascript
 vim-python-pep8-indent https://github.com/Vimjas/vim-python-pep8-indent
