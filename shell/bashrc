@@ -20,5 +20,8 @@
 # man for bashrc
 [ -f ~/.ciber_dotfiles/shell/bashrc_man.sh ] && source ~/.ciber_dotfiles/shell/bashrc_man.sh
 
+# prompt for bashrc
+[ -f ~/.ciber_dotfiles/shell/bashrc_prompt.sh ] && source ~/.ciber_dotfiles/shell/bashrc_prompt.sh
+
 # extra customizations for bashrc
 [ -f ~/.ciber_dotfiles/shell/bashrc-extra.sh ] && source ~/.ciber_dotfiles/shell/bashrc-extra.sh

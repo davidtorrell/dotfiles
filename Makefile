@@ -41,9 +41,6 @@ install-shell:
 
 	touch ~/.hushlogin
 
-install-prompt:
-	source ~/.ciber_dotfiles/shell/bashrc_prompt.sh
-
 install-git:
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
 	$(eval BACKUP_DIR := $(shell echo ".git-backup.$(NOW).$$$$"))
