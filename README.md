@@ -19,7 +19,4 @@ apt install ca-certificates libgnutls30 -y
 
 
 
-
-
-
 git clone -b devel https://github.com/davidtorrell/dotfiles.git ~/.ciber_dotfiles
