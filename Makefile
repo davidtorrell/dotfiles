@@ -57,7 +57,7 @@ install-vim:
 	@rm -rf ~/.vim* || true
 	bash ~/.ciber_dotfiles/vim_runtime/install_awesome_vimrc.sh
 
-install-bashrc
+install-bashrc:
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
 	$(eval BACKUP_DIR := $(shell echo "bashrc-backup.$(NOW).$$$$"))
 	mkdir ~/$(BACKUP_DIR)
