@@ -10,16 +10,16 @@ export LC_ALL=es_ES.UTF-8
 export LANG=es_ES.UTF-8
 
 # general config for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_general.sh ] && . ~/.ciber_dotfiles/shell/bashrc_general.sh
+[ -f ~/.ciber_dotfiles/shell/bashrc_general.sh ] && source ~/.ciber_dotfiles/shell/bashrc_general.sh
 
 # alias for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_alias.sh ] && . ~/.ciber_dotfiles/shell/bashrc_alias.sh
+[ -f ~/.ciber_dotfiles/shell/bashrc_alias.sh ] && source ~/.ciber_dotfiles/shell/bashrc_alias.sh
 
 # tmux for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_tmux.sh ] && . ~/.ciber_dotfiles/shell/bashrc_tmux.sh
+[ -f ~/.ciber_dotfiles/shell/bashrc_tmux.sh ] && source ~/.ciber_dotfiles/shell/bashrc_tmux.sh
 
 # man for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_man.sh ] && . ~/.ciber_dotfiles/shell/bashrc_man.sh
+[ -f ~/.ciber_dotfiles/shell/bashrc_man.sh ] && source ~/.ciber_dotfiles/shell/bashrc_man.sh
 
 # extra customizations for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc-extra.sh ] && . ~/.ciber_dotfiles/shell/bashrc-extra.sh
+[ -f ~/.ciber_dotfiles/shell/bashrc-extra.sh ] && source ~/.ciber_dotfiles/shell/bashrc-extra.sh
