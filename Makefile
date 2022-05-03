@@ -11,6 +11,8 @@ check:
 	command -v wget >/dev/null 2>&1 || { echo >&2 "wget is not installed.  Aborting."; exit 1; }
 	command -v unzip >/dev/null 2>&1 || { echo >&2 "unzip is not installed.  Aborting."; exit 1; }
 	command -v ip >/dev/null 2>&1 || { echo >&2 "ip is not installed.  Aborting."; exit 1; }
+	command -v tmux >/dev/null 2>&1 || { echo >&2 "tmux is not installed.  Aborting."; exit 1; }
+	command -v vi >/dev/null 2>&1 || { echo >&2 "vi is not installed.  Aborting."; exit 1; }
 
 
 install-all: install-tmux install-vim  install-shell install-git
@@ -53,7 +55,6 @@ install-shell:
 	touch ~/.hushlogin
 
 install-git:
-	command -v git >/dev/null 2>&1 || { echo >&2 "git is not installed.  Aborting."; exit 1; }
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
 	$(eval BACKUP_DIR := $(shell echo ".git-backup.$(NOW).$$$$"))
 	mkdir ~/$(BACKUP_DIR)
