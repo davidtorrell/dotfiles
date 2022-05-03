@@ -57,9 +57,21 @@ install-vim:
 	@rm -rf ~/.vim* || true
 	bash ~/.ciber_dotfiles/vim_runtime/install_awesome_vimrc.sh
 
-install-bashrc:
+install-shell:
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
-	$(eval BACKUP_DIR := $(shell echo "bashrc-backup.$(NOW).$$$$"))
+	$(eval BACKUP_DIR := $(shell echo ".bashrc-backup.$(NOW).$$$$"))
 	mkdir ~/$(BACKUP_DIR)
+	mv -f ~/.profile ~/$(BACKUP_DIR) 2> /dev/null || true
 	mv -f ~/.bashrc ~/$(BACKUP_DIR) 2> /dev/null || true
+	mv -f ~/.wgetrc ~/$(BACKUP_DIR) 2> /dev/null || true
+	mv -f ~/.screenrc ~/$(BACKUP_DIR) 2> /dev/null || true
+	mv -f ~/.editorconfig ~/$(BACKUP_DIR) 2> /dev/null || true
+	mv -f ~/.curlrc ~/$(BACKUP_DIR) 2> /dev/null || true
+
+	ln -s  ~/.ciber_dotfiles/shell/profile ~/.profile
 	ln -s  ~/.ciber_dotfiles/shell/bashrc ~/.bashrc
+	ln -s  ~/.ciber_dotfiles/shell/wgetrc ~/.wgetrc
+	ln -s  ~/.ciber_dotfiles/shell/wgetrc ~/.screenrc
+	ln -s  ~/.ciber_dotfiles/shell/wgetrc ~/.editorconfig
+
+	touch ~/.hushlogin
