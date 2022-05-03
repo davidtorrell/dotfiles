@@ -7,6 +7,7 @@ alias mv='mv -i'
 alias du='du -sh'
 alias df='df -h'
 
+alias vi='vim'
 
 alias syslog='tail -f /var/log/syslog'
 alias xopen='xdg-open'
