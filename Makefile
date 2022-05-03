@@ -4,11 +4,7 @@ help:
 	echo "install-tmux"
 	echo "install-vim"
 
-install-all: 
-	install-tmux 
-	install-vim 
-	install-shell 
-	install-git
+install-all: install-tmux install-vim  install-shell install-git
 
 install-tmux:
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
