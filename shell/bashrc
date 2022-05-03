@@ -5,8 +5,6 @@
 #set -o errexit
 #set -o xtrace
 
-
-
 # general config for bashrc
 [ -f ~/.ciber_dotfiles/shell/bashrc_general.sh ] && source ~/.ciber_dotfiles/shell/bashrc_general.sh
 
