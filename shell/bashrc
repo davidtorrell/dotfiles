@@ -5,12 +5,13 @@
 #set -o errexit
 #set -o xtrace
 
-# language
-export LC_ALL=es_ES.UTF-8
-export LANG=es_ES.UTF-8
+
 
 # general config for bashrc
 [ -f ~/.ciber_dotfiles/shell/bashrc_general.sh ] && source ~/.ciber_dotfiles/shell/bashrc_general.sh
+
+# exports config for bashrc
+[ -f ~/.ciber_dotfiles/shell/bashrc_exports.sh ] && source ~/.ciber_dotfiles/shell/bashrc_exports.sh
 
 # alias for bashrc
 [ -f ~/.ciber_dotfiles/shell/bashrc_alias.sh ] && source ~/.ciber_dotfiles/shell/bashrc_alias.sh

@@ -1,13 +1,3 @@
-
-# Expand the history size
-export HISTFILESIZE=10000
-export HISTSIZE=500
-
-# Don't put duplicate lines in the history and do not add lines that start with a space
-export HISTCONTROL=erasedups:ignoredups:ignorespace
-
-export HISTTIMEFORMAT="%F %T "
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -56,13 +46,3 @@ alias weather=_weather
 
 # Cleanup PATH
 export PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
-
-# ViM
-alias vi='vim'
-export EDITOR=vim
-
-# Terminal copy & paste
-if [[ `uname` != "Darwin"  ]]; then
-    alias pbcopy='xclip -in -selection clipboard'
-    alias pbpaste='xclip -out -selection clipboard'
-fi
