@@ -8,8 +8,8 @@ export HISTCONTROL=erasedups:ignoredups:ignorespace
 export HISTTIMEFORMAT="%F %T "
 
 # language
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
+export LC_ALL=es_ES.UTF-8
+export LANG=es_ES.UTF-8
 
 # ViM
 export EDITOR=vi
