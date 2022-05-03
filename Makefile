@@ -9,7 +9,7 @@ install-powerline:
 	go get -u github.com/davidtorrell/powerline-go
 	cp -rf `pwd`/misc/.tmux/tmux-powerline/* ~/.tmux/tmux-powerline/
 
-install-shell:
+install-shell2:
 	rm -f ~/.profile
 	rm -f ~/.bashrc
 	cp -f `pwd`/shell/profile ~/.profile
@@ -19,7 +19,7 @@ install-bin:
 	mkdir -p ~/.bin
 	cp -f `pwd`/bin/* ~/.bin/
 
-install-git:
+install-git2:
 	rm -f ~/.gitconfig
 	rm -f ~/.gitignore
 	rm -f ~/.git-completion.bash
@@ -49,12 +49,19 @@ help:
 	echo "install-vim"
 
 install-tmux:
-	@rm -rf ~/.tmux* || true
-	@rm -r ~/.tmux* || true
+	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
+	$(eval BACKUP_DIR := $(shell echo ".tmux-backup.$(NOW).$$$$"))
+	mkdir ~/$(BACKUP_DIR)
+	mv -f ~/.tmux* ~/$(BACKUP_DIR) 2> /dev/null || true
+
 	ln -s ~/.ciber_dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 install-vim:
-	@rm -rf ~/.vim* || true
+	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
+	$(eval BACKUP_DIR := $(shell echo ".vim-backup.$(NOW).$$$$"))
+	mkdir ~/$(BACKUP_DIR)
+	mv -f ~/.vim* ~/$(BACKUP_DIR) 2> /dev/null || true
+
 	bash ~/.ciber_dotfiles/vim_runtime/install_awesome_vimrc.sh
 
 install-shell:
@@ -75,3 +82,13 @@ install-shell:
 	ln -s  ~/.ciber_dotfiles/shell/wgetrc ~/.editorconfig
 
 	touch ~/.hushlogin
+
+install-git:
+	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
+	$(eval BACKUP_DIR := $(shell echo ".git-backup.$(NOW).$$$$"))
+	mkdir ~/$(BACKUP_DIR)
+	mv -f ~/.gitconfig ~/$(BACKUP_DIR) 2> /dev/null || true
+	mv -f ~/.gitignore ~/$(BACKUP_DIR) 2> /dev/null || true
+	
+	cp -f ~/.ciber_dotfiles/git/gitconfig ~/.gitconfig
+	cp -f ~/.ciber_dotfiles/git/gitignore ~/.gitignore
