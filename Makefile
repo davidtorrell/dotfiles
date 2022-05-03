@@ -49,10 +49,10 @@ help:
 	echo "install-vim"
 
 install-tmux:
-	rm -rf ~/.tmux*
-	rm -r ~/.tmux*
+	@ rm -rf ~/.tmux* || true
+	@ rm -r ~/.tmux* || true
 	ln -s ~/.ciber_dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 install-vim:
-	rm -rf ~/.vim*
+	@ rm -rf ~/.vim* || true
 	bash ~/.ciber_dotfiles/vim_runtime/install_awesome_vimrc.sh
