@@ -1,20 +1,14 @@
 .DEFAULT_GOAL := help
-.SILENT: install-tmux
 
-install: install-go install-shell install-powerline install-bin install-git install-misc
-
-install-go:
-	apt install golang -y
-
-install-powerline:
-	go get -u github.com/davidtorrell/powerline-go
-	cp -rf `pwd`/misc/.tmux/tmux-powerline/* ~/.tmux/tmux-powerline/
-
-
-## OK
 help:
 	echo "install-tmux"
 	echo "install-vim"
+
+install-all: 
+	install-tmux 
+	install-vim 
+	install-shell 
+	install-git
 
 install-tmux:
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
