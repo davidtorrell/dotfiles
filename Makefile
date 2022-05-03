@@ -32,12 +32,22 @@ install-misc:
 
 	cp -f `pwd`/misc/vimrc ~/.vimrc
 
-ifeq ($(shell uname), Darwin)
-	mkdir -p ~/.tmux
-	cp -f `pwd`/misc/tmux-mac.conf ~/.tmux.conf
-	cp -f `pwd`/misc/tmux/ip_address.sh ~/.tmux/ip_address.sh
-	touch ~/.hushlogin
-else
-	cp -f `pwd`/misc/tmux-linux.conf ~/.tmux.conf
-endif
+	ifeq ($(shell uname), Darwin)
+		mkdir -p ~/.tmux
+		cp -f `pwd`/misc/tmux-mac.conf ~/.tmux.conf
+		cp -f `pwd`/misc/tmux/ip_address.sh ~/.tmux/ip_address.sh
+		touch ~/.hushlogin
+	else
+		cp -f `pwd`/misc/tmux-linux.conf ~/.tmux.conf
+	endif
 
+
+## OK
+install-tmux:
+	rm -rf ~/.tmux*
+	rm -r ~/.tmux*
+	ln -s ~/.ciber_dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+install-vim:
+	rm -rf ~/.vim*
+	bash ~/.ciber_dotfiles/vim_runtime/install_awesome_vimrc.sh
