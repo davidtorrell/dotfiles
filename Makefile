@@ -1,3 +1,4 @@
+.DEFAULT_GOAL := help
 
 install: install-go install-shell install-powerline install-bin install-git install-misc
 
@@ -43,6 +44,10 @@ install-misc:
 
 
 ## OK
+help:
+	echo "install-tmux"
+	echo "install-vim"
+
 install-tmux:
 	rm -rf ~/.tmux*
 	rm -r ~/.tmux*
