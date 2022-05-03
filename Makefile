@@ -1,12 +1,21 @@
 .DEFAULT_GOAL := help
 
 help:
-	echo "install-tmux"
-	echo "install-vim"
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
+	| sed -n 's/^\(.*\): \(.*\)##\(.*\)/\1\3/p' \
+	| column -t  -s ' '
+
+check: 
+	command -v curl >/dev/null 2>&1 || { echo >&2 "curl is not installed.  Aborting."; exit 1; }
+	command -v wget >/dev/null 2>&1 || { echo >&2 "wget is not installed.  Aborting."; exit 1; }
+	command -v unzip >/dev/null 2>&1 || { echo >&2 "unzip is not installed.  Aborting."; exit 1; }
+	command -v ip >/dev/null 2>&1 || { echo >&2 "ip is not installed.  Aborting."; exit 1; }
+
 
 install-all: install-tmux install-vim  install-shell install-git
 
 install-tmux:
+	command -v tmux >/dev/null 2>&1 || { echo >&2 "tmux is not installed.  Aborting."; exit 1; }
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
 	$(eval BACKUP_DIR := $(shell echo ".tmux-backup.$(NOW).$$$$"))
 	mkdir ~/$(BACKUP_DIR)
@@ -15,6 +24,7 @@ install-tmux:
 	ln -s ~/.ciber_dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 install-vim:
+	command -v vi >/dev/null 2>&1 || { echo >&2 "vi is not installed.  Aborting."; exit 1; }
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
 	$(eval BACKUP_DIR := $(shell echo ".vim-backup.$(NOW).$$$$"))
 	mkdir ~/$(BACKUP_DIR)
@@ -42,6 +52,7 @@ install-shell:
 	touch ~/.hushlogin
 
 install-git:
+	command -v git >/dev/null 2>&1 || { echo >&2 "git is not installed.  Aborting."; exit 1; }
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
 	$(eval BACKUP_DIR := $(shell echo ".git-backup.$(NOW).$$$$"))
 	mkdir ~/$(BACKUP_DIR)
