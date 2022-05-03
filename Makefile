@@ -1,4 +1,5 @@
 .DEFAULT_GOAL := help
+.SILENT: help check install-all install-tmux install-vim install-shell install-git 
 
 help:
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
