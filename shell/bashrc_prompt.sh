@@ -83,6 +83,6 @@ PS1+="\[${white}\]@";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${white}\]:";
 PS1+="\[${green}\]\w"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] branch: \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
+PS1+="\$(prompt_git \"\[${white}\] branch:\[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
 PS1+="\[${white}\]\ $ \[${reset}\]"; # `$` (and reset color)
 export PS1;
