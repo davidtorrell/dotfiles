@@ -52,7 +52,7 @@ fi
 
 if [ "$screen" = true ]; then
 	echo 'ciber dotfiles: Backup .screenrc ... OK'
-	BACKUP_DIR='screen-backup'.`date +%Y-%m-%d.%H:%M:%S`
+	BACKUP_DIR='.screen-backup'.`date +%Y-%m-%d.%H:%M:%S`
 	mkdir ~/$BACKUP_DIR
 	mv -f ~/.screenrc ~/$BACKUP_DIR 2> /dev/null || true
 
