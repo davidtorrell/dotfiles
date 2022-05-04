@@ -13,25 +13,17 @@ git clone https://github.com/davidtorrell/dotfiles.git ~/.ciber_dotfiles
 cd ~/.ciber_dotfiles
 ```
 
-#### Check dependences:
-``` 
-make check
-```
-#### Install modules:
+
+#### Configure modules in *config* file:
+
 * **TMUX**: configuration for tmux
 * **VIM**: configuration for vim with plugins
 * **SHELL**: bashrc and multiple profiles config
 * **GIT**: gitconfig assembled
 
+to install RUN 
 ```
-make install-tmux
-make install-vim
-make install-shell
-make install-git
-```
-#### Install all (optional):
-```
-make install-all
+bash ~/.ciber_dotfiles/install
 ```
 
 # TODO
