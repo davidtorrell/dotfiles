@@ -4,17 +4,17 @@ source config
 
 if [ "$profile" = true ]; then
 	BACKUP_DIR='.profile-backup'.`date +%Y-%m-%d.%H:%M:%S`
-	mkdir ~/$(BACKUP_DIR)
+	mkdir ~/$BACKUP_DIR
 
-	mv -f ~/.profile ~/$(BACKUP_DIR) 2> /dev/null || true
+	mv -f ~/.profile ~/$BACKUP_DIR 2> /dev/null || true
 	ln -s  ~/.ciber_dotfiles/shell/profile ~/.profile
 fi
 
 if [ "$bash" = true ]; then 
 	BACKUP_DIR='.bashrc-backup'.`date +%Y-%m-%d.%H:%M:%S`
-	mkdir ~/$(BACKUP_DIR)
+	mkdir ~/$BACKUP_DIR
 
-    mv -f ~/.bashrc ~/$(BACKUP_DIR) 2> /dev/null || true
+    mv -f ~/.bashrc ~/$BACKUP_DIR 2> /dev/null || true
 	ln -s  ~/.ciber_dotfiles/shell/bashrc ~/.bashrc
     touch ~/.hushlogin
 fi
