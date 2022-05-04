@@ -11,10 +11,8 @@ if [ "$profile" = true ]; then
 	ln -s  ~/.ciber_dotfiles/shell/profile ~/.profile
 fi
 
-if [ "$bash" = true ]; then
-	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
-	$(eval BACKUP_DIR := $(shell echo ".bashrc-backup.$(NOW).$$$$"))
-	mkdir ~/$(BACKUP_DIR)
+if [ "$bash" = true ]; then 
+	mkdir ~/.bashrc-backup.`date +%Y-%m-%d.%H:%M:%S`
 
     mv -f ~/.bashrc ~/$(BACKUP_DIR) 2> /dev/null || true
 	ln -s  ~/.ciber_dotfiles/shell/bashrc ~/.bashrc
