@@ -17,6 +17,12 @@ check:
 
 install-all: install-tmux install-vim  install-shell install-git
 
+install:
+	if [ "$bash_alias" = true ]; then
+		echo "This won't print, var is false!"
+	fi
+
+
 install-tmux:
 	command -v tmux >/dev/null 2>&1 || { echo >&2 "tmux is not installed.  Aborting."; exit 1; }
 	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))

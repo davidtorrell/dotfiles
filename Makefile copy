@@ -1,0 +1,32 @@
+.DEFAULT_GOAL := help
+.SILENT: help check install-all install-tmux install-vim install-shell install-git 
+
+help:
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
+	| sed -n 's/^\(.*\): \(.*\)##\(.*\)/\1\3/p' \
+	| column -t  -s ' '
+
+check: 
+	command -v curl >/dev/null 2>&1 || { echo >&2 "curl is not installed.  Aborting."; exit 1; }
+	command -v wget >/dev/null 2>&1 || { echo >&2 "wget is not installed.  Aborting."; exit 1; }
+	command -v unzip >/dev/null 2>&1 || { echo >&2 "unzip is not installed.  Aborting."; exit 1; }
+	command -v ip >/dev/null 2>&1 || { echo >&2 "ip is not installed.  Aborting."; exit 1; }
+	command -v tmux >/dev/null 2>&1 || { echo >&2 "tmux is not installed.  Aborting."; exit 1; }
+	command -v vi >/dev/null 2>&1 || { echo >&2 "vi is not installed.  Aborting."; exit 1; }
+
+
+install-all: install-tmux install-vim  install-shell install-git
+
+install:
+	if [ "$bash_alias" = true ]; then
+		echo "This won't print, var is false!"
+	fi
+
+
+
+install-shell:
+
+
+	
+
+install-git:

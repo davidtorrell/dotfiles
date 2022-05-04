@@ -4,24 +4,35 @@
 # for debugging
 #set -o errexit
 #set -o xtrace
+source ~/.ciber_dotfiles/config
 
 # general config for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_general.sh ] && source ~/.ciber_dotfiles/shell/bashrc_general.sh
+if [ "$bash_general" = true ]; then
+    [ -f ~/.ciber_dotfiles/shell/bashrc_general.sh ] && source ~/.ciber_dotfiles/shell/bashrc_general.sh
+fi
 
 # exports config for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_exports.sh ] && source ~/.ciber_dotfiles/shell/bashrc_exports.sh
-
+if [ "$bash_exports" = true ]; then
+    [ -f ~/.ciber_dotfiles/shell/bashrc_exports.sh ] && source ~/.ciber_dotfiles/shell/bashrc_exports.sh
+fi
 # alias for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_alias.sh ] && source ~/.ciber_dotfiles/shell/bashrc_alias.sh
+if [ "$bash_alias" = true ]; then
+    [ -f ~/.ciber_dotfiles/shell/bashrc_alias.sh ] && source ~/.ciber_dotfiles/shell/bashrc_alias.sh
+fi
 
 # tmux for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_tmux.sh ] && source ~/.ciber_dotfiles/shell/bashrc_tmux.sh
+if [ "$bash_tmux" = true ]; then
+    [ -f ~/.ciber_dotfiles/shell/bashrc_tmux.sh ] && source ~/.ciber_dotfiles/shell/bashrc_tmux.sh
+fi
 
 # man for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_man.sh ] && source ~/.ciber_dotfiles/shell/bashrc_man.sh
+if [ "$bash_man" = true ]; then
+    [ -f ~/.ciber_dotfiles/shell/bashrc_man.sh ] && source ~/.ciber_dotfiles/shell/bashrc_man.sh
+fi
 
 # prompt for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc_prompt.sh ] && source ~/.ciber_dotfiles/shell/bashrc_prompt.sh
-
+if [ "$bash_prompt" = true ]; then
+    [ -f ~/.ciber_dotfiles/shell/bashrc_prompt.sh ] && source ~/.ciber_dotfiles/shell/bashrc_prompt.sh
+fi
 # extra customizations for bashrc
 [ -f ~/.ciber_dotfiles/shell/bashrc-extra.sh ] && source ~/.ciber_dotfiles/shell/bashrc-extra.sh

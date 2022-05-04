@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+## SHELL
+profile=true
+
+bash=true
+bash_general=true
+bash_exports=true
+bash_alias=true
+bash_tmux=true
+bash_prompt=true
+bash_man=true
+
+wget=true
+screen=true
+curl=true
+
+editorconfig=true
+
+## TMUX
+tmux=true
+
+## VIM
+vim=true
+
+## GIT
+git=true
+
