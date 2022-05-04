@@ -3,8 +3,7 @@
 source config
 
 if [ "$profile" = true ]; then
-	$(eval NOW := $(shell date +%Y-%m-%d.%H:%M:%S))
-	$(eval BACKUP_DIR := $(shell echo ".profile-backup.$(NOW).$$$$"))
+	mkdir ~/.profile-backup.`date +%Y-%m-%d.%H:%M:%S`
 	mkdir ~/$(BACKUP_DIR)
 
 	mv -f ~/.profile ~/$(BACKUP_DIR) 2> /dev/null || true
