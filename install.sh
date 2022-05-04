@@ -3,7 +3,7 @@
 source config
 
 if [ "$profile" = true ]; then
-	mkdir ~/.profile-backup.`date +%Y-%m-%d.%H:%M:%S`
+	BACKUP_DIR='.profile-backup'.`date +%Y-%m-%d.%H:%M:%S`
 	mkdir ~/$(BACKUP_DIR)
 
 	mv -f ~/.profile ~/$(BACKUP_DIR) 2> /dev/null || true
@@ -11,7 +11,8 @@ if [ "$profile" = true ]; then
 fi
 
 if [ "$bash" = true ]; then 
-	mkdir ~/.bashrc-backup.`date +%Y-%m-%d.%H:%M:%S`
+	BACKUP_DIR='.bashrc-backup'.`date +%Y-%m-%d.%H:%M:%S`
+	mkdir ~/$(BACKUP_DIR)
 
     mv -f ~/.bashrc ~/$(BACKUP_DIR) 2> /dev/null || true
 	ln -s  ~/.ciber_dotfiles/shell/bashrc ~/.bashrc
