@@ -23,7 +23,7 @@ cd ~/.ciber_dotfiles
 
 to install RUN 
 ```
-bash ~/.ciber_dotfiles/install
+bash ~/.ciber_dotfiles/install.sh
 ```
 
 # TODO
