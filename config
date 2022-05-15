@@ -8,7 +8,7 @@ bash_general=true
 bash_exports=true
 bash_alias=true
 bash_tmux=true
-bash_prompt=true
+bash_prompt=false
 bash_man=true
 
 wget=true
