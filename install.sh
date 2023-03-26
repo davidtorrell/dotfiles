@@ -19,15 +19,15 @@ echo ":'######::'####:'########::'########:'########:::::
  ########::. #######::::: ##:::: ##:::::::'####: ########: ########:. ######::
 ........::::.......::::::..:::::..::::::::....::........::........:::......:::"
 
-if [ "$profile" = true ]; then
-	echo 'ciber dotfiles: Backup .profile ... OK'
-	BACKUP_DIR='.profile-backup'.`date +%Y-%m-%d.%H:%M:%S`
-	mkdir ~/$BACKUP_DIR
-	mv -f ~/.profile ~/$BACKUP_DIR 2> /dev/null || true
+# if [ "$profile" = true ]; then
+# 	echo 'ciber dotfiles: Backup .profile ... OK'
+# 	BACKUP_DIR='.profile-backup'.`date +%Y-%m-%d.%H:%M:%S`
+# 	mkdir ~/$BACKUP_DIR
+# 	mv -f ~/.profile ~/$BACKUP_DIR 2> /dev/null || true
 
-	echo 'ciber dotfiles: Install .profile ... OK'
-	ln -s  ~/.ciber_dotfiles/shell/profile ~/.profile
-fi
+# 	echo 'ciber dotfiles: Install .profile ... OK'
+# 	ln -s  ~/.ciber_dotfiles/shell/profile ~/.profile
+# fi
 
 if [ "$bash" = true ]; then 
 	echo 'ciber dotfiles: Backup .bashrc ... OK'
@@ -88,6 +88,7 @@ if [ "$tmux" = true ]; then
 	mv -f ~/.tmux* ~/$BACKUP_DIR 2> /dev/null || true
 
 	echo 'ciber dotfiles: Install .tmux ... OK'
+    [ -f ~/.ciber_dotfiles/tmux/bashrc_tmux.sh ] && source ~/.ciber_dotfiles/tmux/bashrc_tmux.sh
 	ln -s ~/.ciber_dotfiles/tmux/tmux.conf ~/.tmux.conf
 fi
 

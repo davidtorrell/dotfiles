@@ -37,12 +37,5 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # Always dump the core
 ulimit -c unlimited
 
-# weather function and alias
-function _weather()
-{
-    curl -4 wttr.in/${1:-Reus}
-}
-alias weather=_weather
-
 # Cleanup PATH
 export PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')

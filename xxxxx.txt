@@ -1,0 +1,3 @@
+
+# dir env options
+eval "$(direnv hook bash)"

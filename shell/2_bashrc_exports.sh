@@ -11,11 +11,5 @@ export HISTTIMEFORMAT="%F %T "
 export LC_ALL=es_ES.UTF-8
 export LANG=es_ES.UTF-8
 
-# ViM
-export EDITOR=vi
-
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
-
-# dir env options
-eval "$(direnv hook bash)"

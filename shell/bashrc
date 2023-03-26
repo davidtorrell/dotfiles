@@ -8,31 +8,17 @@ source ~/.ciber_dotfiles/config
 
 # general config for bashrc
 if [ "$bash_general" = true ]; then
-    [ -f ~/.ciber_dotfiles/shell/bashrc_general.sh ] && source ~/.ciber_dotfiles/shell/bashrc_general.sh
+    [ -f ~/.ciber_dotfiles/shell/1_bashrc_general.sh ] && source ~/.ciber_dotfiles/shell/1_bashrc_general.sh
 fi
 
 # exports config for bashrc
 if [ "$bash_exports" = true ]; then
-    [ -f ~/.ciber_dotfiles/shell/bashrc_exports.sh ] && source ~/.ciber_dotfiles/shell/bashrc_exports.sh
+    [ -f ~/.ciber_dotfiles/shell/2_bashrc_exports.sh ] && source ~/.ciber_dotfiles/shell/2_bashrc_exports.sh
 fi
 # alias for bashrc
 if [ "$bash_alias" = true ]; then
-    [ -f ~/.ciber_dotfiles/shell/bashrc_alias.sh ] && source ~/.ciber_dotfiles/shell/bashrc_alias.sh
+    [ -f ~/.ciber_dotfiles/shell/3_bashrc_alias.sh ] && source ~/.ciber_dotfiles/shell/3_bashrc_alias.sh
 fi
 
-# tmux for bashrc
-if [ "$bash_tmux" = true ]; then
-    [ -f ~/.ciber_dotfiles/shell/bashrc_tmux.sh ] && source ~/.ciber_dotfiles/shell/bashrc_tmux.sh
-fi
-
-# man for bashrc
-if [ "$bash_man" = true ]; then
-    [ -f ~/.ciber_dotfiles/shell/bashrc_man.sh ] && source ~/.ciber_dotfiles/shell/bashrc_man.sh
-fi
-
-# prompt for bashrc
-if [ "$bash_prompt" = true ]; then
-    [ -f ~/.ciber_dotfiles/shell/bashrc_prompt.sh ] && source ~/.ciber_dotfiles/shell/bashrc_prompt.sh
-fi
 # extra customizations for bashrc
-[ -f ~/.ciber_dotfiles/shell/bashrc-extra.sh ] && source ~/.ciber_dotfiles/shell/bashrc-extra.sh
+[ -f ~/.ciber_dotfiles/shell/bashrc_extra.sh ] && source ~/.ciber_dotfiles/shell/bashrc_extra.sh
